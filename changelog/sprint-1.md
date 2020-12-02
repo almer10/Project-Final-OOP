@@ -30,3 +30,4 @@ Sprint kemarin dianggap terlalu sedikit sehingga diperlukan adanya penyesuaian t
 | 2.1 | Membuat Grid | Almer | 
 | 2.2 | Membuat Tingkat Kesulitan | Ananda |
 | 2.3 | Membuat Layouting | Fahri |
+| 2.4 | Membuat Tombol | ALL |
