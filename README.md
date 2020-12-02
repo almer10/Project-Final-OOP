@@ -18,17 +18,20 @@ This repository is a final project (Java GUI) from Object-Oriented Programming C
    -  Short changes 1
    - Short changes 2
 
-- **[Sprint 1](changelog/sprint-1.md) - (date from x until x)** 
-   - Short changes 1
-   - Short changes 2
+- **[Sprint 1](changelog/sprint-1.md) - (Week 1)** 
+   - Mencari Referensi
+   - Pembuatan Git
+   - Menyusun Sprint
 
-- **[Sprint 2](changelog/sprint-2.md) - (date from x until x)** 
-   - Short changes 1
-   - Short changes 2
+- **[Sprint 2](changelog/sprint-2.md) - (Week 2)** 
+   - Membuat Grid
+   - Membuat Level
+   - Layouting
    
-- **[Sprint 3](changelog/sprint-3.md) - (date from x until x)** 
-   - Short changes 1
-   - Short changes 2
+- **[Sprint 3](changelog/sprint-3.md) - (Week 3)** 
+   - Finishing
+   - Membuat Main
+   - Pencocokan Case
 
 ## Running The App
 
