@@ -1,4 +1,4 @@
-# Project Name
+# Sudoku
 
 This repository is a final project (Java GUI) from Object-Oriented Programming Class, Teknik Informatika Universitas Padjadjaran. 
 
@@ -9,8 +9,8 @@ This repository is a final project (Java GUI) from Object-Oriented Programming C
 ## Credits
 | NPM           | Name        |
 | ------------- |-------------|
-| 140810190065  | Prianggara Hadyan A    |
 | 140810190057  | Muhamad Fachri M       |
+| 140810190065  | Prianggara Hadyan A    |
 | 140810190071  | Ananda Miftakhul S     |
 
 ## Change log
