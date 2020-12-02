@@ -1,5 +1,5 @@
 # Scrum Report (Sprint 1)
-| From dd/mm/yyyy to dd/mm/yyyy
+| From 18/11/2020 to 25/11/2020
 
 ## Team (Insert your name)
 | NPM           | Name        |
