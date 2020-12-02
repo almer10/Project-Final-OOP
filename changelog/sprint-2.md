@@ -1,24 +1,26 @@
 # Scrum Report (Sprint 2)
-| From dd/mm/yyyy to dd/mm/yyyy
+| From 25/11/2020 to 01/12/2020
 
 ## Team (Insert your name)
 | NPM           | Name        |
 | ------------- |-------------|
-| 140810xx00xx  | John Doe    |
-| 140810xx00xx  | Jane Doe    |
-| 140810xx00xx  | Lorem Ipsum |
+| 140810190057  | Muhamad Fachri M       |
+| 140810190065  | Prianggara Hadyan A    |
+| 140810190071  | Ananda Miftakhul S     |
 
 ## Sprint Overview
 | Planned (n)   | Completed (n) |
 | ------------- |-------------- |
-| n             | n             |
+| 3             | 3             |
 
 ## Sprint 2 Backlog
 
 | ID  | Title/Desc | Asignee | Status |
 | --- | ---------- | ------- | ------ |
-| 2.1 | Preparing the x | Jane Doe | DONE |
-| 2.2 | Make the x | John Doe | FAILED |
+| 2.1 | Membuat Grid | Almer | DONE |
+| 2.2 | Membuat Tingkat Kesulitan | Ananda | DONE |
+| 2.3 | Membuat Layouting | Fahri | PLANNED |
+
 
 ## Retrospective 
 
@@ -27,5 +29,6 @@ Sprint kemarin dianggap terlalu sedikit sehingga diperlukan adanya penyesuaian t
 ## Next Sprint Backlog (Sprint 3)
 | ID  | Title/Desc | Asignee | 
 | --- | ---------- | ------- | 
-| 3.1 | Preparing the x | Jane Doe | 
-| 3.2 | Make the x | John Doe | 
+| 3.1 | Finishing | ALL | 
+| 3.2 | Membuat Main | ALL |
+| 3.3 | Pencocokan Case | ALL |
