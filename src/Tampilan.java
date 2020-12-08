@@ -30,12 +30,12 @@ public class Tampilan extends JPanel implements ActionListener // membuat tampil
 
     public Tampilan() // construct
     {
-        addMouseListener(new MouseAdapter() // mouse click untuk angka yang di dalam kotak sub grid
+        addMouseListener(new MouseAdapter() 
         {
             public void mousePressed(MouseEvent e) {
-                selectNumber(e.getX(), e.getY()); // untuk memanggil mouse click
-            }// end of mouse select
-        });// end of mouse listener
+                selectNumber(e.getX(), e.getY()); 
+            }
+        });
         this.setLayout(new BorderLayout());
 
         JPanel pb = new JPanel(); // membuat tombol
@@ -44,7 +44,7 @@ public class Tampilan extends JPanel implements ActionListener // membuat tampil
 
         FlowLayout FL = new FlowLayout();
         FL.setVgap(55);
-        FL.setHgap(100); // mengatur layout secara simetris
+        FL.setHgap(100); 
         pb.setLayout(FL);
         SButton EYS = new SButton("Pilihan", "EYS");
         EYS.addActionListener(this);
@@ -64,59 +64,59 @@ public class Tampilan extends JPanel implements ActionListener // membuat tampil
         SButton STS = new SButton("Jawaban", "STS");
         STS.addActionListener(this);
         pb.add(STS);
-        this.add(pb, BorderLayout.WEST); // Menambahkan tombol yang ada di atas
+        this.add(pb, BorderLayout.WEST); 
     }
 
     private void selectNumber(int x, int y) // memanggil method mouse click
     {
-        int NumberPosition[] = { 3, 63, 124, 187, 248, 309, 372, 433, 494 }; // posisi angka
-        final byte pSNumberY = 19; // jarak antar angka
+        int NumberPosition[] = { 3, 63, 124, 187, 248, 309, 372, 433, 494 }; 
+        final byte pSNumberY = 19; 
         if (x < ButtonsWidth + NumberPosition[0])
-            return; // kalo mouse gak di dalem panelnya tidak akan terjadi apa-apa
-        x -= ButtonsWidth - NumberPosition[0]; // reset x value
+            return; 
+        x -= ButtonsWidth - NumberPosition[0]; 
 
         byte count;
-        byte Xposition = 0; // the position of the selected box 0 - 8 in X
-        for (count = 0; count < 9; count++) // Mengecek Posisi
+        byte Xposition = 0; 
+        for (count = 0; count < 9; count++) 
         {
             if (x > NumberPosition[count])
-                Xposition = count; // it must be this(or the next)
-        } // Akhir dari posisi x
+                Xposition = count; 
+        } 
 
-        byte Yposition = 0; // the position of the selected box 0 - 8 in X
-        for (count = 0; count < 9; count++) // cek posisi
+        byte Yposition = 0; 
+        for (count = 0; count < 9; count++) 
         {
             if (y > NumberPosition[count])
-                Yposition = count; // it must be this(or the next)
-        } // end of get y position
-        byte position = (byte) (Xposition + Yposition * 9); // the number position 0 - 80
+                Yposition = count; 
+        } 
+        byte position = (byte) (Xposition + Yposition * 9); 
 
-        byte Xnumber = 0; // posisi angka x pada angka 123 atau 456 atau 789
-        x -= NumberPosition[Xposition]; // reset posisi x
-        for (count = 0; count < 3; count++) // cek untuk semua posisi
+        byte Xnumber = 0; 
+        x -= NumberPosition[Xposition]; 
+        for (count = 0; count < 3; count++) 
         {
             if (x > pSNumberY * count)
-                Xnumber = count; // it must be this(or the next)
-        } // end get the x number
+                Xnumber = count; 
+        } 
 
-        byte Ynumber = 0; // angka di posisi x 123 atau 456 atau 789
-        y -= NumberPosition[Yposition]; // reset posisi x atau angka di x
-        for (count = 0; count < 3; count++) // cek untuk mencari posisi
+        byte Ynumber = 0; 
+        y -= NumberPosition[Yposition]; 
+        for (count = 0; count < 3; count++) 
         {
             if (y > pSNumberY * count)
-                Ynumber = count; // it must be this(or the next)
-        } // end get y number
-        byte number = (byte) (Xnumber + Ynumber * 3); // pilihan angka yang diberikan 0 - 8
+                Ynumber = count; 
+        } 
+        byte number = (byte) (Xnumber + Ynumber * 3); 
 
         Sudoku.step = Smethods.select(Sudoku.sudoku, number, position, Sudoku.step);
-        repaint(ButtonsWidth, 0, DisplayWidth, DisplayHeight); // call the paint method
+        repaint(ButtonsWidth, 0, DisplayWidth, DisplayHeight); 
 
-    }// akhir dari perintah/code pemilihan angka
+    }
 
-    public Dimension getPreferredSize() // mengatur ukuran dari tampilan
+    public Dimension getPreferredSize() 
     {
         return new Dimension(DisplayWidth + ButtonsWidth, DisplayHeight);
-    }// end of get dimension of Tampilan(button panel + sudoku display)
+    }
 
     protected void paintComponent(Graphics g) {
         final byte Foot = 24; // tinggi dari dasar sudoku
@@ -139,14 +139,12 @@ public class Tampilan extends JPanel implements ActionListener // membuat tampil
         Font fontFoot = new Font("SansSerif", Font.ROMAN_BASELINE, 20); // the foot text
         Font fontPencil = new Font("SansSerif", Font.ROMAN_BASELINE, 20); // pencil lines
 
-        super.paintComponent(g); // paint the component's JPanel
+        super.paintComponent(g); 
         g.setColor(DB);
         g.setFont(fontPencil);
-        // g.drawString(String.valueOf(numberops.number),squareX,squareY); //langkah
-        // sudoku
 
         // batas horizontal
-        byte count; // counter untuk posisi 0 - 80
+        byte count; 
         for (count = 0; count < 5; count++)
             g.fillRect(0, BigLines[count], DisplayWidth + ButtonsWidth, 3);
         for (count = 0; count < 6; count++)
@@ -164,9 +162,9 @@ public class Tampilan extends JPanel implements ActionListener // membuat tampil
         g.drawString(String.valueOf(Sudoku.step), FootNumberX + ButtonsWidth, FootNumberY);
         byte numbercount;
         for (numbercount = 0; numbercount < 81; numbercount++) {
-            g.setColor(DB); // reset warna
-            byte zeros = 0; // count the number of zeros in the number(9 pencils numbers)
-            byte outercount; // outside counter
+            g.setColor(DB); 
+            byte zeros = 0; 
+            byte outercount; 
             for (outercount = 0; outercount < 3; outercount++) {
                 for (count = 0; count < 3; count++) {
                     byte pencilnumber = Sudoku.sudoku[count + outercount * 3 + numbercount * 9][Sudoku.step];
@@ -176,14 +174,14 @@ public class Tampilan extends JPanel implements ActionListener // membuat tampil
                             g.drawString(String.valueOf(pencilnumber),
                                     NumberPosition[numbercount % 9] + (count * pSNumberX) + pNumberX + ButtonsWidth,
                                     NumberPosition[numbercount / 9] + outercount * pSNumberY + pNumberY);
-                        } // gambar angka
+                        } 
                         else {
                             g.setFont(fontSelected);
                             g.drawString(String.valueOf(pencilnumber - 10),
                                     NumberPosition[numbercount % 9] + ButtonsWidth + NumberX,
                                     NumberPosition[numbercount / 9] + NumberY);
-                        } // gambarkan angka yang dipilih
-                    } // program dari tampilan angka berakhir
+                        } 
+                    } 
                     else
                         zeros += 1;
                 }
@@ -193,30 +191,30 @@ public class Tampilan extends JPanel implements ActionListener // membuat tampil
                 g.fillRect(NumberPosition[numbercount % 9] + ButtonsWidth, NumberPosition[numbercount / 9], blanksize,
                         blanksize);
             }
-        } // end of draw the 81 number positions numbercount
-    }// end of paint sudoku display
+        } 
+    }
 
     public void actionPerformed(ActionEvent e) // Panggil metod untuk tombol push/tekan
     {
         if (e.getActionCommand() == "EYS")
-            Sudoku.step = 0; // tidak ada yang dipilih
+            Sudoku.step = 0; 
         else if (e.getActionCommand() == "SHS") {
             Smethods.trysudoku(Sudoku.sudoku, (byte) 0);
-            Sudoku.step = 9; // diisi dengan 56 langkah
+            Sudoku.step = 9; 
         } else if (e.getActionCommand() == "SMS") {
             Smethods.trysudoku(Sudoku.sudoku, (byte) 0);
-            Sudoku.step = 18; // diisi dengan 46 langkah
+            Sudoku.step = 18; 
         } else if (e.getActionCommand() == "SES") {
             Smethods.trysudoku(Sudoku.sudoku, (byte) 0);
-            Sudoku.step = 36; // diisi dengan 36 langkah
+            Sudoku.step = 36; 
         } else if (e.getActionCommand() == "STS") {
-            Smethods.trysudoku(Sudoku.sudoku, Sudoku.step); // solve this one
+            Smethods.trysudoku(Sudoku.sudoku, Sudoku.step); 
         } else if (e.getActionCommand() == "GBS") {
             if (Sudoku.step > 0)
-                Sudoku.step -= 1; // go back 1 step
+                Sudoku.step -= 1; 
         }
 
         repaint(ButtonsWidth, 0, DisplayWidth, DisplayHeight); // call the paint method
     }// end of button pressed method
 
-}// akhiran dari code tampilan
+}
