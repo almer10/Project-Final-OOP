@@ -30,6 +30,6 @@ Sprint kemarin dianggap terlalu sedikit sehingga diperlukan adanya penyesuaian t
 ## Next Sprint Backlog (Sprint 3)
 | ID  | Title/Desc | Asignee | 
 | --- | ---------- | ------- | 
-| 3.1 | Finishing | ALL | 
-| 3.2 | Membuat Main | ALL |
-| 3.3 | Pencocokan Case | ALL |
+| 3.1 | Finishing | Fachri | 
+| 3.2 | Membuat Main | Almer |
+| 3.3 | Pencocokan Case | Ananda |
