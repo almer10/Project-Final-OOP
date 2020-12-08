@@ -108,7 +108,7 @@ public class Tampilan extends JPanel implements ActionListener // membuat tampil
         } // end get y number
         byte number = (byte) (Xnumber + Ynumber * 3); // pilihan angka yang diberikan 0 - 8
 
-        MySudoku.step = Smethods.select(MySudoku.sudoku, number, position, MySudoku.step);
+        Sudoku.step = Smethods.select(Sudoku.sudoku, number, position, Sudoku.step);
         repaint(ButtonsWidth, 0, DisplayWidth, DisplayHeight); // call the paint method
 
     }// akhir dari perintah/code pemilihan angka
@@ -161,7 +161,7 @@ public class Tampilan extends JPanel implements ActionListener // membuat tampil
         // foot text
         g.setFont(fontFoot);
         g.drawString("Langkah        Solusi Sudoku", FootMessageX + ButtonsWidth, FootMessageY);
-        g.drawString(String.valueOf(MySudoku.step), FootNumberX + ButtonsWidth, FootNumberY);
+        g.drawString(String.valueOf(Sudoku.step), FootNumberX + ButtonsWidth, FootNumberY);
         byte numbercount;
         for (numbercount = 0; numbercount < 81; numbercount++) {
             g.setColor(DB); // reset warna
@@ -169,7 +169,7 @@ public class Tampilan extends JPanel implements ActionListener // membuat tampil
             byte outercount; // outside counter
             for (outercount = 0; outercount < 3; outercount++) {
                 for (count = 0; count < 3; count++) {
-                    byte pencilnumber = MySudoku.sudoku[count + outercount * 3 + numbercount * 9][MySudoku.step];
+                    byte pencilnumber = Sudoku.sudoku[count + outercount * 3 + numbercount * 9][Sudoku.step];
                     if (pencilnumber > 0) {
                         if (pencilnumber < 10) {
                             g.setFont(fontPencil);
@@ -199,21 +199,21 @@ public class Tampilan extends JPanel implements ActionListener // membuat tampil
     public void actionPerformed(ActionEvent e) // Panggil metod untuk tombol push/tekan
     {
         if (e.getActionCommand() == "EYS")
-            MySudoku.step = 0; // tidak ada yang dipilih
+            Sudoku.step = 0; // tidak ada yang dipilih
         else if (e.getActionCommand() == "SHS") {
-            Smethods.trysudoku(MySudoku.sudoku, (byte) 0);
-            MySudoku.step = 9; // diisi dengan 56 langkah
+            Smethods.trysudoku(Sudoku.sudoku, (byte) 0);
+            Sudoku.step = 9; // diisi dengan 56 langkah
         } else if (e.getActionCommand() == "SMS") {
-            Smethods.trysudoku(MySudoku.sudoku, (byte) 0);
-            MySudoku.step = 18; // diisi dengan 46 langkah
+            Smethods.trysudoku(Sudoku.sudoku, (byte) 0);
+            Sudoku.step = 18; // diisi dengan 46 langkah
         } else if (e.getActionCommand() == "SES") {
-            Smethods.trysudoku(MySudoku.sudoku, (byte) 0);
-            MySudoku.step = 36; // diisi dengan 36 langkah
+            Smethods.trysudoku(Sudoku.sudoku, (byte) 0);
+            Sudoku.step = 36; // diisi dengan 36 langkah
         } else if (e.getActionCommand() == "STS") {
-            Smethods.trysudoku(MySudoku.sudoku, MySudoku.step); // solve this one
+            Smethods.trysudoku(Sudoku.sudoku, Sudoku.step); // solve this one
         } else if (e.getActionCommand() == "GBS") {
-            if (MySudoku.step > 0)
-                MySudoku.step -= 1; // go back 1 step
+            if (Sudoku.step > 0)
+                Sudoku.step -= 1; // go back 1 step
         }
 
         repaint(ButtonsWidth, 0, DisplayWidth, DisplayHeight); // call the paint method
