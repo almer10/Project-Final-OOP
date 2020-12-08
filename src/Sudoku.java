@@ -1,11 +1,9 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
@@ -22,14 +20,8 @@ public class Sudoku {
 		final byte border = 14; 
 		JFrame f = new JFrame("Sudoku");
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		BufferedImage image = null;
-		try {
-			image = ImageIO.read(new File("sudoku.png"));
-		} catch (IOException e) {
-		} 
 		f.setResizable(false); 
-		f.setIconImage(image);
-		f.setSize(WindowWidth, WindowHeight); s
+		f.setSize(WindowWidth, WindowHeight); 
 		f.setLocation(0, 0); 
 		f.setLayout(new BorderLayout()); 
 
