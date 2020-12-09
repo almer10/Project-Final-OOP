@@ -20,9 +20,7 @@
 | 1.1 | Mencari Referensi | Fahri | DONE |
 | 1.2 | Membuat Repository | Almer | DONE |
 | 1.3 | Menyusun Sprint 1 | Ananda | PLANNED |
-## Retrospective 
 
-Sprint kemarin dianggap terlalu sedikit sehingga diperlukan adanya penyesuaian tugas. Lorem ipsum dolor sit amet
 
 ## Next Sprint Backlog (Sprint 2)
 | ID  | Title/Desc | Asignee | 
