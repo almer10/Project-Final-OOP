@@ -31,7 +31,7 @@ public class Sudoku {
 		f.add(new SPanel(new Dimension(0, WindowHeight)), BorderLayout.WEST); 
 
 		Tampilan tp = new Tampilan();
-		tp.setBackground(Color.BLACK); 
+		tp.setBackground(Color.WHITE); 
 		f.add(tp, BorderLayout.CENTER); 
 
 		f.setVisible(true);

@@ -24,9 +24,9 @@ public class Tampilan extends JPanel implements ActionListener // membuat tampil
     private int DisplayWidth = 557; // tampilan sudoku dengan lebar 557 pixels
     private int DisplayHeight = 580; // tampilan sudoku dengan tinggi 580 pixels
     private int ButtonsWidth = 200; // tombol dengan lebar 200 pixels
-    private final Color LB = new Color(0xAD, 0xD8, 0xE6); // Biru Terang
-    private final Color DB = new Color(0x1E, 0x90, 0xFF); // Biru Gelap
-    private final Color P = new Color(0x80, 0, 0x80); // Ungu
+    private final Color LB = new Color(255,255,255); // Biru Terang
+    private final Color DB = new Color(0,0,0); // Biru Gelap
+    private final Color P = new Color(255,0,0); // Ungu
 
     public Tampilan() // construct
     {
