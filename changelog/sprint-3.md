@@ -11,7 +11,7 @@
 ## Sprint Overview
 | Planned (n)   | Completed (n) |
 | ------------- |-------------- |
-| n             | n             |
+| 3             | 3             |
 
 ## Sprint 3 Backlog
 
@@ -21,7 +21,5 @@
 | 3.2 | Membuat Main | Prianggara Hadyan Almer | Done |
 | 3.3 | Penyesuaian Case | Ananda Syifa | Done |
 
-## Retrospective 
 
-Sprint kemarin dianggap terlalu sedikit sehingga diperlukan adanya penyesuaian tugas. Lorem ipsum dolor sit amet
 
