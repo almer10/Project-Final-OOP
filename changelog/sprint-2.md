@@ -19,8 +19,8 @@
 | --- | ---------- | ------- | ------ |
 | 2.1 | Membuat Grid | Almer | DONE |
 | 2.2 | Membuat Tingkat Kesulitan | Ananda | DONE |
-| 2.3 | Membuat Layouting | Fahri | PLANNED |
-| 2.4 | Membuat Tombol | ALL | PLANNED |
+| 2.3 | Membuat Layouting | Fahri | DONE |
+| 2.4 | Membuat Tombol | ALL | DONE |
 
 
 ## Retrospective 
